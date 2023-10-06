@@ -1,3 +1,5 @@
+
+
 <header class="header-area">
     <div class="header-top second-header d-none d-md-block">
         <div class="container">
@@ -8,9 +10,8 @@
                         <ul>
                             <li>
                                 <i class="icon dripicons-phone"></i>
-                                <span>0 212 222 22 22</span>
+                                <span>{{ config('settings', 'telefon1') }}</span>
                             </li>
-
                             <li>
                                 <i class="icon dripicons-mail"></i>
                                 <span>info@baytech.com</span>
@@ -35,11 +36,11 @@
     <div class="menu-area">
         <div class="container">
             <div class="second-menu">
-                <div class="row">
+                <div class="row mm">
                     <div class="col-md-4">
                         <div class="position-absolute" style="bottom: 10px">
                             <a href="{{ route('home') }}" title="{{ config('app.name') }}">
-                                <img src="/logo.png" alt="{{ config('app.name') }}" class="img-fluid">
+                                <img src="/logo.png" alt="{{ config('app.name') }}" class="img-fluid baytech-logo">
                             </a>
                         </div>
                     </div>
