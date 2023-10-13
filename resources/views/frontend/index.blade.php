@@ -33,7 +33,7 @@
                     <div class="section-title cta-title wow fadeInLeft animated" data-animation="fadeInDown animated" data-delay=".2s">
                         <span class="text-white"><small class="circle-left"><img src="/frontend/img/bg/circle_Left.png" alt="img"></small> BAY-TECH MAKİNE<small class="circle-right"><img src="/frontend/img/bg/circle_right.png" alt="img"></small></span>
                         <h2>BİZİ YAKINDAN TANIYIN</h2>
-                        <h4>Yandaki tanıtım videomuzu izleyerek yaptmış olduğumuş işleri ve firmamızı daha yakından tanıyın</h4>
+                        <h4 class="text-white">Yandaki tanıtım videomuzu izleyerek yaptmış olduğumuş işleri ve firmamızı daha yakından tanıyın</h4>
 
                         <p>İşimizi Gerçekten Severek Yapıyoruz.” Bay-Tech Makine'nın başarısının tek ve yegane sebebi de bu. Çünkü biliyoruz ki; ancak bir işi
                             sevdiğiniz zaman o alanda kendinizi daha da geliştirmek ve daha başarılı olmak için çalışırsınız.
@@ -64,7 +64,7 @@
 
                 </div>
                 <div class="col-lg-6">
-                    <div class="video-img wow fadeInRight animated" data-animation="fadeInDown animated" data-delay=".2s" style="background-image:url(/frontend/img/video/how-img.png); background-size: cover;">
+                    <div class="video-img wow fadeInRight animated" data-animation="fadeInDown animated" data-delay=".2s" style="background-image:url(/video.jpg); background-size: cover;">
                         <a href="https://www.youtube.com/watch?v=vKSA_idPZkc" class="video-i popup-video"> <img src="/frontend/img/video/play.svg" alt="img" class="active-icon"></a>
                     </div>
 
