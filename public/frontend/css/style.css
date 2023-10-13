@@ -46,7 +46,7 @@ a:hover,
 }
 a,
 button {
-	color: #1696e7;
+	color: #fff;
 	outline: medium none;
 }
 button:focus,input:focus,input:focus,textarea,textarea:focus{outline: none;box-shadow: none;}

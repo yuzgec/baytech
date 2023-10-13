@@ -85,7 +85,7 @@
                             <div class="feature-box-info">
                                 <h2 class="font-weight-bold text-color-dark">Adres</h2>
                                 <p class="text-4">
-                                    İstanbul
+                                    {{ config('settings.adres1') }}
 
                                 </p>
                             </div>
@@ -101,7 +101,10 @@
                             <div class="feature-box-info">
                                 <h2 class="font-weight-bold text-color-dark">Telefon</h2>
                                 <p class="text-4">
-                                    0 212 222 22 22<br>
+                                    {{ config('settings.telefon1') }}<br>
+                                    @if(config('settings.telefon2' ))
+                                        {{ config('settings.telefon2') }}
+                                    @endif
                                 </p>
                             </div>
                         </div>
@@ -116,7 +119,7 @@
                             <div class="feature-box-info">
                                 <h2 class="font-weight-bold text-color-dark">Email</h2>
                                 <p class="text-4">
-                                    <a href="mailto:info@bay-tech.com" class="text-decoration-none">info@bay-tech.com</a><br>
+                                    <a href="mailto:{{ config('settings.email1') }}" class="text-decoration-none">{{ config('settings.email1') }}</a><br>
                                 </p>
                             </div>
                         </div>

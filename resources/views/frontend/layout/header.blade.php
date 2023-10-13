@@ -10,11 +10,11 @@
                         <ul>
                             <li>
                                 <i class="icon dripicons-phone"></i>
-                                <span>{{ config('settings', 'telefon1') }}</span>
+                                <span>{{ config('settings.telefon1') }}</span>
                             </li>
                             <li>
                                 <i class="icon dripicons-mail"></i>
-                                <span>info@baytech.com</span>
+                                <span>{{ config('settings.email1') }}</span>
                             </li>
                         </ul>
                     </div>
@@ -22,13 +22,13 @@
                 <div class="col-lg-2 col-md-2 d-none d-lg-block">
                     <div class="header-social text-right">
                         <span>
-                            <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
-                            <a href="#" title="İnstagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://facebook.com/{{ config('settings.facebook') }}" title="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="https://instagram.com/{{ config('settings.instagram') }}" title="İnstagram"><i class="fab fa-instagram"></i></a>
                        </span>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 d-none d-md-block">
-                    <a href="#" class="top-btn">Teklif İste</a>
+                    <a href="{{ route('contactus') }}" class="top-btn">Teklif İste</a>
                 </div>
             </div>
         </div>
