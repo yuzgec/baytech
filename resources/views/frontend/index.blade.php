@@ -1,7 +1,6 @@
 @extends('frontend.layout.app')
 @section('content')
     @include('frontend.layout.slider')
-
     <section id="services" class="services-area services-bg services-two pt-95 pb-70"  style="background-image:url(/frontend/img/bg/services_aliment_bg.png); background-size: contain; background-repeat: no-repeat;background-position: center center;">
         <div class="container">
             <div class="row justify-content-center">
@@ -13,7 +12,7 @@
                 </div>
             </div>
             <div class="row">
-                @foreach($Service as $item)
+                @foreach($Service->where('category',1) as $item)
                 <div class="col-lg-4 col-md-6">
                     <div class="s-single-services  {{ ($loop->first) ? 'active' : null}}  active wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s"
                          style="min-height: 200px;background-image: url({{ (!$item->getFirstMediaUrl('page')) ? '/resimyok.jpg' : $item->getFirstMediaUrl('page', 'thumb') }})">
@@ -32,7 +31,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section-title cta-title wow fadeInLeft animated" data-animation="fadeInDown animated" data-delay=".2s">
-                        <span>OUR IMPORTENTS <small class="circle-right"><img src="/frontend/img/bg/circle_right.png" alt="img"></small></span>
+                        <span class="text-white">OUR IMPORTENTS <small class="circle-right"><img src="/frontend/img/bg/circle_right.png" alt="img"></small></span>
                         <h2>How We Work For You To Boost Your Business</h2>
                         <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc ornare mauris elit, vel semper ipsum convallis a. Quisque id faucibus massa. Aliquam a bibendum lacus, vitae laoreet lectus. Sed a velit suscipit, mattis elit sed, convallis elit.</p>
                         <p>Phasellus ut consequat elit. Donec dapibus, dolor ac mollis mollis, sapien lorem gravida magna.</p>
@@ -42,7 +41,7 @@
                                     <div class="icon">
                                         <img src="/frontend/img/video/1.svg" alt="img">
                                     </div>
-                                    <p> <a href="#">info@baytechmakine.com</a></p>
+                                    <p> <a href="#">{{ config('settings.email1') }}</a></p>
                                 </div>
                             </div>
                             <div class="col-lg-2">
@@ -53,7 +52,7 @@
                                     <div class="icon">
                                         <img src="/frontend/img/video/2.svg" alt="img">
                                     </div>
-                                    <p> <a href="#">0 212 222 22 22</a></p>
+                                    <p> <a href="#">{{ config('settings.telefon1') }}</a></p>
                                 </div>
                             </div>
                         </div>
@@ -98,8 +97,6 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="s-about-img p-relative">
-
-
                     </div>
                 </div>
 
@@ -113,7 +110,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-10">
                     <div class="section-title text-left pl-40 pr-40 mb-80">
-                        <span> BAY-TECH MAKİNE<small class="circle-right"><img src="/frontend/img/bg/circle_right.png" alt="img"></small></span>
+                        <span class="text-white"> BAY-TECH MAKİNE<small class="circle-right"><img src="/frontend/img/bg/circle_right.png" alt="img"></small></span>
                         <h2>SON PROJELERİMİZ</h2>
                     </div>
                 </div>
@@ -123,107 +120,22 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row portfolio-active">
-                <div class="col-xl-4">
+            <div class="row portfolio-active ">
+                @foreach($Service->where('category',2) as $item)
+                <div class="col-md-4">
                     <div class="single-project mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
                         <div class="project-thumb">
-                            <img src="/frontend/img/portfolio/p_img01.png" alt="img" class="img">
+                            <img src="{{ $item->getFirstMediaUrl('page', 'thumb') }}" alt="{{ $item->title.' | '.config('app.anem') }}" class="img">
                         </div>
                         <div class="project-info">
-                            <h4>Materals Management</h4>
-                            <a href="#">Take a Look  <img src="/frontend/img/portfolio/right_icon.svg" alt="img">        </a>
+                            <h4>{{ $item->title }}</h4>
+                            <a href="#">Projeyi İncele
+                                <img src="/frontend/img/portfolio/right_icon.svg" alt="{{ config('app.name') }}">
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4">
-                    <div class="single-project mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
-                        <div class="project-thumb">
-                            <img src="/frontend/img/portfolio/p_img02.png" alt="img" class="img">
-                        </div>
-                        <div class="project-info">
-                            <h4>Materals Management</h4>
-                            <a href="#">Take a Look  <img src="/frontend/img/portfolio/right_icon.svg" alt="img">        </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4">
-                    <div class="single-project mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
-                        <div class="project-thumb">
-                            <img src="/frontend/img/portfolio/p_img03.png" alt="img" class="img">
-                        </div>
-                        <div class="project-info">
-                            <h4>Materals Management</h4>
-                            <a href="#">Take a Look  <img src="/frontend/img/portfolio/right_icon.svg" alt="img">        </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4">
-                    <div class="single-project mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
-                        <div class="project-thumb">
-                            <img src="/frontend/img/portfolio/p_img04.png" alt="img" class="img">
-                        </div>
-                        <div class="project-info">
-                            <h4>Materals Management</h4>
-                            <a href="#">Take a Look  <img src="/frontend/img/portfolio/right_icon.svg" alt="img">        </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4">
-                    <div class="single-project mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
-                        <div class="project-thumb">
-                            <img src="/frontend/img/portfolio/p_img05.png" alt="img" class="img">
-                        </div>
-                        <div class="project-info">
-                            <h4>Materals Management</h4>
-                            <a href="#">Take a Look  <img src="/frontend/img/portfolio/right_icon.svg" alt="img">        </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4">
-                    <div class="single-project mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
-                        <div class="project-thumb">
-                            <img src="/frontend/img/portfolio/p_img01.png" alt="img" class="img">
-                        </div>
-                        <div class="project-info">
-                            <h4>Materals Management</h4>
-                            <a href="#">Take a Look  <img src="/frontend/img/portfolio/right_icon.svg" alt="img">        </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4">
-                    <div class="single-project mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
-                        <div class="project-thumb">
-                            <img src="/frontend/img/portfolio/p_img02.png" alt="img" class="img">
-                        </div>
-                        <div class="project-info">
-                            <h4>Materals Management</h4>
-                            <a href="#">Take a Look  <img src="/frontend/img/portfolio/right_icon.svg" alt="img">        </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4">
-                    <div class="single-project mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
-                        <div class="project-thumb">
-                            <img src="/frontend/img/portfolio/p_img03.png" alt="img" class="img">
-                        </div>
-                        <div class="project-info">
-                            <h4>Materals Management</h4>
-                            <a href="#">Take a Look  <img src="/frontend/img/portfolio/right_icon.svg" alt="img">        </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4">
-                    <div class="single-project mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
-                        <div class="project-thumb">
-                            <img src="/frontend/img/portfolio/p_img04.png" alt="img" class="img">
-                        </div>
-                        <div class="project-info">
-                            <h4>Materals Management</h4>
-                            <a href="#">Take a Look  <img src="/frontend/img/portfolio/right_icon.svg" alt="img">        </a>
-
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
