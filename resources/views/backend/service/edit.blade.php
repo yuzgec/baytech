@@ -3,6 +3,7 @@
 @section('content')
     {{Form::model($Edit, ["route" => ["service.update", $Edit->id],'enctype' => 'multipart/form-data'])}}
     @method('PUT')
+    <input type="hidden" value="{{ request('category') }}" name="category">
     <div class="row">
         <div class="col-12 col-md-9">
 
@@ -11,14 +12,10 @@
                     <div class="d-flex">
                         <h4 class="card-title justify-content-center align-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                            Hizmet Düzenle [ {{$Edit->title }}]
+                            {{ request('name') }} Düzenle [ {{$Edit->title }}]
                         </h4>
                     </div>
                     <div>
-                        <a class="btn btn-tabler btn-sm p-2" href="{{  url()->previous() }}" title="Geri">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" /><line x1="10" y1="14" x2="20" y2="4" /><polyline points="15 4 20 4 20 9" /></svg>
-                            Önizle
-                        </a>
                         <a class="btn btn-tabler btn-sm p-2" href="{{  url()->previous() }}" title="Geri">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 18v-6a3 3 0 0 0 -3 -3h-10l4 -4m0 8l-4 -4" /></svg>
                             Geri
@@ -31,7 +28,6 @@
                 </div>
                 <div class="card-body">
                     <x-form-inputtext label="Başlık" name="title"></x-form-inputtext>
-                    <x-form-select label="Kategori" name="category" :list="$Kategori"></x-form-select>
                     <x-form-textarea label="Kısa Açıklama" name="short" :ck='null'></x-form-textarea>
                     <x-form-textarea label="Açıklama" name="desc"></x-form-textarea>
                     <div class="card-header mb-2">
@@ -53,7 +49,7 @@
                 <div class="card-header">
                     <h4 class="card-title">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="15" y1="8" x2="15.01" y2="8" /><rect x="4" y="4" width="16" height="16" rx="3" /><path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" /><path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" /></svg>
-                        Hizmet Kapak Resim
+                        Kapak Resim
                     </h4>
                 </div>
                 <div class="card-body justify-content-center align-items-center">
@@ -76,7 +72,7 @@
                 <div class="card-header">
                     <h4 class="card-title">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2" /><line x1="9" y1="13" x2="15" y2="13" /></svg>
-                        Hizmet Galeri
+                        Galeri
                     </h4>
                 </div>
                 <div class="p-2">

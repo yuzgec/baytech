@@ -17,7 +17,8 @@ class ServiceController extends Controller
 
     public function index()
     {
-        $All = Service::with('getCategory')->orderBy('rank')->get();
+
+        $All = Service::with('getCategory')->orderBy('rank')->where('category', \request('category'))->get();
         $Kategori = ServiceCategory::all();
         return view('backend.service.index', compact('All', 'Kategori'));
     }
