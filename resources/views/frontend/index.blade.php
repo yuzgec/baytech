@@ -31,10 +31,14 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section-title cta-title wow fadeInLeft animated" data-animation="fadeInDown animated" data-delay=".2s">
-                        <span class="text-white">OUR IMPORTENTS <small class="circle-right"><img src="/frontend/img/bg/circle_right.png" alt="img"></small></span>
-                        <h2>How We Work For You To Boost Your Business</h2>
-                        <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc ornare mauris elit, vel semper ipsum convallis a. Quisque id faucibus massa. Aliquam a bibendum lacus, vitae laoreet lectus. Sed a velit suscipit, mattis elit sed, convallis elit.</p>
-                        <p>Phasellus ut consequat elit. Donec dapibus, dolor ac mollis mollis, sapien lorem gravida magna.</p>
+                        <span class="text-white"><small class="circle-left"><img src="/frontend/img/bg/circle_Left.png" alt="img"></small> BAY-TECH MAKİNE<small class="circle-right"><img src="/frontend/img/bg/circle_right.png" alt="img"></small></span>
+                        <h2>BİZİ YAKINDAN TANIYIN</h2>
+                        <h4>Yandaki tanıtım videomuzu izleyerek yaptmış olduğumuş işleri ve firmamızı daha yakından tanıyın</h4>
+
+                        <p>İşimizi Gerçekten Severek Yapıyoruz.” Bay-Tech Makine'nın başarısının tek ve yegane sebebi de bu. Çünkü biliyoruz ki; ancak bir işi
+                            sevdiğiniz zaman o alanda kendinizi daha da geliştirmek ve daha başarılı olmak için çalışırsınız.
+                            Ekibimize dahil olan herkes de işini severek yapıyor ve kendi alanlarında gelişebilmek için çaba harcıyor.</p>
+
                         <div class="row mt-30">
                             <div class="col-lg-5">
                                 <div class="social">
@@ -90,13 +94,14 @@
                             işletme ekonomisi en üst seviyede tutacak sistem tasarımları yapmayı hedeflemektedir.</P>
 
                         <div class="slider-btn mt-30">
-                            <a href="#" class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s">Read More</a>
+                            <a href="{{ route('service') }}" class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s">Hizmetlerimiz</a>
                             <div class="btn-after" data-animation="fadeInRight" data-delay=".8s"></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="s-about-img p-relative">
+                        <img src="/proje.jpg" class="img-fluid" alt="{{ config('app.name') }}">
                     </div>
                 </div>
 
