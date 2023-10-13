@@ -102,9 +102,9 @@ class HomeController extends Controller
         $New->message =  $request->message;
         $New->save();
 
-//    Mail::send("mail.form",compact('New'),function ($message) use($New) {
-//        $message->to('pskturancetin@gmail.com')->subject($New->name.' - Site Bilgi Formu');
-//    });
+    Mail::send("mail.form",compact('New'),function ($message) use($New) {
+        $message->to('info@baytechmakine.com')->subject($New->name.' - Site Bilgi Formu');
+    });
 
         return redirect()->route('home');
     }
