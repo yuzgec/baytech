@@ -67,7 +67,6 @@
                     <div class="video-img wow fadeInRight animated" data-animation="fadeInDown animated" data-delay=".2s" style="background-image:url(/video.jpg); background-size: cover;">
                         <a href="https://www.youtube.com/watch?v=vKSA_idPZkc" class="video-i popup-video"> <img src="/frontend/img/video/play.svg" alt="img" class="active-icon"></a>
                     </div>
-
                 </div>
             </div>
         </div>

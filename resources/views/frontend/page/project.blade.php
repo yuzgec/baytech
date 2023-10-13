@@ -21,4 +21,28 @@
         </div>
     </section>
 
+
+
+
+        <div class="container mt-5">
+            <div class="row">
+                @foreach($Service->where('category',2) as $item)
+                    <div class="col-md-4">
+                        <div class="single-project mb-30">
+                            <div class="project-thumb">
+                                <img src="{{ $item->getFirstMediaUrl('page', 'thumb') }}" alt="{{ $item->title.' | '.config('app.anem') }}" class="img">
+                            </div>
+                            <div class="project-info">
+                                <h4>{{ $item->title }}</h4>
+                                <a href="#">Projeyi İncele
+                                    <img src="/frontend/img/portfolio/right_icon.svg" alt="{{ config('app.name') }}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+
+
 @endsection

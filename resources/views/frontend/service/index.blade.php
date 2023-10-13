@@ -21,25 +21,28 @@
         </div>
     </section>
 
-    <div class="container container-fluid mt-4">
-        <div class="row">
-            @foreach($Service as $item)
-                <div class="col-lg-4 mb-4">
-                    <a href="{{ route('servicedetail' , $item->slug)}}" title="{{ $item->title }}">
-
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-show-more thumb-info-no-zoom">
-                        <span class="thumb-info-wrapper">
-                            <img src="{{ (!$item->getFirstMediaUrl('page')) ? '/resimyok.jpg' : $item->getFirstMediaUrl('page', 'thumb') }}" class="img-fluid" alt="{{ $item->title }} - Dr. Turan Çetin">
-                            <span class="thumb-info-title">
-                                <span class="thumb-info-inner line-height-1">{{ $item->title }}</span>
-
-                            </span>
-                        </span>
-                    </span>
-                    </a>
+    <section id="services" class="services-area services-bg services-two pt-95 pb-70"  style="background-image:url(/frontend/img/bg/services_aliment_bg.png); background-size: contain; background-repeat: no-repeat;background-position: center center;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-10 col-lg-10">
+                    <div class="section-title text-center pl-40 pr-40 mb-80 wow fadeInDown animated" data-animation="fadeInDown animated" data-delay=".2s">
+                        <span><small class="circle-left"><img src="/frontend/img/bg/circle_Left.png" alt="img"></small> BAY-TECH MAKİNE<small class="circle-right"><img src="/frontend/img/bg/circle_right.png" alt="img"></small></span>
+                        <h2>ÇALIŞMA ALANLARIMIZ - HİZMETLERİMİZ</h2>
+                    </div>
                 </div>
-
-            @endforeach
+            </div>
+            <div class="row">
+                @foreach($Service->where('category',1) as $item)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="s-single-services  {{ ($loop->first) ? 'active' : null}}  active wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s"
+                             style="min-height: 200px;background-image: url({{ (!$item->getFirstMediaUrl('page')) ? '/resimyok.jpg' : $item->getFirstMediaUrl('page', 'thumb') }})">
+                            <div class="second-services-content">
+                                <p class="position-absolute"  style="bottom:15px;font-size: 22px;font-weight: bold"><a href="{{ route('service', $item->slug) }}">{{ $item->title }}</a></p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
         </div>
-    </div>
+    </section>
 @endsection

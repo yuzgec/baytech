@@ -40,7 +40,7 @@
                         </div>
                         <div class="footer-link">
                             <ul>
-                                @foreach($Service as $item)
+                                @foreach($Service->where('category',1) as $item)
                                     <li><a href="{{ route('servicedetail', $item->slug) }}">{{ $item->title }}</a></li>
                                 @endforeach
                             </ul>
