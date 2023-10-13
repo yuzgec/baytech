@@ -1,7 +1,5 @@
 @extends('frontend.layout.app')
 @section('content')
-
-
     <section class="breadcrumb-area d-flex align-items-center" style="background-image:url(/back.jpg);">
         <div class="container" >
             <div class="row">
@@ -39,10 +37,9 @@
 
                     <div class="sidebar-widget categories mt-3">
                         <div class="widget-content">
-                            <!-- Services Category -->
                             <ul class="services-categories">
                                 @foreach($Service as $item)
-                                <li class="">
+                                <li>
                                     <a href="{{ route('servicedetail' , $item->slug)}}" title="{{ $item->title }}">
                                         {{ $item->title }}
                                     </a>
