@@ -16,7 +16,7 @@
                 @foreach($Service as $item)
                 <div class="col-lg-4 col-md-6">
                     <div class="s-single-services  {{ ($loop->first) ? 'active' : null}} wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s"
-                         style="min-height: 200px;background-image: url('https://argonmuhendislik.com.tr/images/endustriyel-dogalgaz-tesisati/endustriyel-dogalgaz-tesisati_1.jpg')">
+                         style="min-height: 200px;background-image: url({{ (!$item->getFirstMediaUrl('page')) ? '/resimyok.jpg' : $item->getFirstMediaUrl('page', 'thumb') }})">
                         <div class="second-services-content">
                             <h5 class="position-absolute"  style="bottom:15px"><a href="{{ route('service', $item->slug) }}">{{ $item->title }}</a></h5>
                         </div>

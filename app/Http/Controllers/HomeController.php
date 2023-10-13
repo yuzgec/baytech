@@ -7,6 +7,7 @@ use App\Models\Blog;
 use App\Models\Form;
 use App\Models\Page;
 use App\Models\Service;
+use App\Models\Slider;
 use App\Models\Video;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Support\Facades\Mail;
@@ -15,8 +16,8 @@ class HomeController extends Controller
 {
 
     public function index(){
-
-        return view('frontend.index');
+        $Slider = Slider::all();
+        return view('frontend.index',compact('Slider'));
 
     }
 

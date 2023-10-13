@@ -11,15 +11,14 @@ class SliderController extends Controller
 {
     public function index()
     {
-        $All = Slider::with('getProduct')->orderBy('rank')->get();
+        $All = Slider::all();
 
         return view('backend.slider.index', compact('All'));
     }
 
     public function create()
     {
-        $Pro= Product::pluck('title', 'id');
-        return view('backend.slider.create', compact('Pro'));
+        return view('backend.slider.create');
     }
 
     public function store(SliderRequest $request)
@@ -29,8 +28,6 @@ class SliderController extends Controller
         $New->text1 = $request->text1;
         $New->text2 = $request->text2;
         $New->text3 = $request->text3;
-        $New->align = $request->align;
-        $New->product_id = $request->product_id;
         $New->button_text = $request->button_text;
         $New->button_link = $request->button_link;
 
@@ -57,8 +54,7 @@ class SliderController extends Controller
     public function edit($id)
     {
         $Edit = Slider::findOrFail($id);
-        $Pro= Product::pluck('title', 'id');
-        return view('backend.slider.edit', compact('Edit','Pro'));
+        return view('backend.slider.edit', compact('Edit'));
     }
 
     public function update(SliderRequest $request, $id)
@@ -68,8 +64,6 @@ class SliderController extends Controller
         $Update->text1 = $request->text1;
         $Update->text2 = $request->text2;
         $Update->text3 = $request->text3;
-        $Update->align = $request->align;
-        $Update->product_id = $request->product_id;
         $Update->button_text = $request->button_text;
         $Update->button_link = $request->button_link;
 
