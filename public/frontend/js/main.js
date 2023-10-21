@@ -78,7 +78,7 @@ function mainSlider() {
 	});
 	BasicSlider.slick({
 		autoplay: true,
-		autoplaySpeed: 10000,
+		autoplaySpeed: 5000,
 		dots:true ,
 		fade: true,
 		arrows: false,

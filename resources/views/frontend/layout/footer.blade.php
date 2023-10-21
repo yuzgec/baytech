@@ -2,12 +2,12 @@
     <div class="footer-top pb-30">
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col-xl-4 col-lg-4 col-sm-6">
+                <div class="col-md-3 col-sm-6">
                     <div class="footer-widget mb-30">
                         <img src="/baytech--logo-beyaz.png" class="img-fluid" alt="{{ config('app.name') }}">
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                     <div class="footer-widget mb-30">
                         <div class="f-widget-title">
                             <h5>İletişim Bilgileri</h5>
@@ -33,7 +33,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-4 col-lg-4 col-sm-6">
+                <div class="col-md-5 col-sm-6">
                     <div class="footer-widget mb-30">
                         <div class="f-widget-title">
                             <h5>Hizmetlerimiz</h5>

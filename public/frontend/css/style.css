@@ -1764,7 +1764,7 @@ margin-bottom: 0;
     text-align: center;
 }
 .cta-bg .social a{
-    font-size: 18px;
+    font-size: 15px;
     color: #fff;
     font-weight: 600;
 }
@@ -6321,4 +6321,22 @@ p.checkout-coupon input[type="text"] {
     top: 0;
     width: auto;
     z-index: 0;
+}
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 85px;
+    right: 14px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+.my-float {
+    margin-top: 16px;
 }

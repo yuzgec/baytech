@@ -1,5 +1,3 @@
-
-
 <header class="header-area">
     <div class="header-top second-header d-none d-md-block">
         <div class="container">
@@ -11,10 +9,6 @@
                             <li>
                                 <i class="icon dripicons-phone"></i>
                                 <span>{{ config('settings.telefon1') }}</span>
-                            </li>
-                            <li>
-                                <i class="icon dripicons-mail"></i>
-                                <span>{{ config('settings.email1') }}</span>
                             </li>
                         </ul>
                     </div>
