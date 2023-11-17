@@ -154,7 +154,7 @@
                 </div>
                 <div class="col-lg-7 col-md-7 col-sm-12">
                     <h2>İhtiyaçlarınız Doğrultusunda Maksimum Fayda Sağlıyoruz. Bizden Teklif Almadan Bir Projeye Başlamayın.</h2>
-                    <div class="number text-white">0 212 222 22 22</div>
+                    <div class="number text-white"><a href="tel:{{ config('settings.telefon1') }}">{{ config('settings.telefon1') }}</a></div>
                 </div>
             </div>
         </div>

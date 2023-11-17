@@ -8,7 +8,7 @@
                         <ul>
                             <li>
                                 <i class="icon dripicons-phone"></i>
-                                <span>{{ config('settings.telefon1') }}</span>
+                                <span><a href="tel:{{ config('settings.telefon1') }}" class="text-dark">{{ config('settings.telefon1') }}</a></span>
                             </li>
                         </ul>
                     </div>
