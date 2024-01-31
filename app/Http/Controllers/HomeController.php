@@ -111,7 +111,7 @@ class HomeController extends Controller
 
     public function reference(){
 
-        $Detail = Service::where('id', 15)->firstOrFail();
+        $Detail = Service::where('id', 11)->firstOrFail();
 
         SEOMeta::setTitle($Detail->title. ' | Bay-Tech');
         SEOMeta::setDescription($Detail->title. ' | Bay-Tech');
