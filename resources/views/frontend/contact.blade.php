@@ -85,7 +85,8 @@
                             <div class="feature-box-info">
                                 <h2 class="font-weight-bold text-color-dark">Adres</h2>
                                 <p class="text-4">
-                                    {{ config('settings.adres1') }}
+                                    {{ config('settings.adres1') }}<br>
+                                    {{ config('settings.adres2') }}
 
                                 </p>
                             </div>
@@ -119,7 +120,7 @@
                             <div class="feature-box-info">
                                 <h2 class="font-weight-bold text-color-dark">Email</h2>
                                 <p class="text-4">
-                                    <a href="mailto:{{ config('settings.email1') }}" class="text-decoration-none">{{ config('settings.email1') }}</a><br>
+                                    <a href="mailto:{{ config('settings.email1') }}" class="text-decoration-none text-color-dark">{{ config('settings.email1') }}</a><br>
                                 </p>
                             </div>
                         </div>

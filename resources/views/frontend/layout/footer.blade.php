@@ -26,6 +26,7 @@
                                     <li>
                                         <i class="fal fa-map-marker-alt"></i>
                                         <span>{{ config('settings.adres1') }}</span>
+                                        <span>{{ config('settings.adres2') }}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -41,7 +42,7 @@
                         <div class="footer-link">
                             <ul>
                                 @foreach($Service->where('category',1) as $item)
-                                    <li><a href="{{ route('servicedetail', $item->slug) }}">{{ $item->title }}</a></li>
+                                    <li><a href="{{ route('servicedetail', $item->slug) }}"><i class="fas fa-chevron-right"></i> {{ $item->title }}</a></li>
                                 @endforeach
                             </ul>
                         </div>
