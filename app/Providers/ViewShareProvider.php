@@ -29,13 +29,17 @@ class ViewShareProvider extends ServiceProvider
             return Blog::all();
         });
 
+        $Reference = Cache::remember('reference',now()->addYear(1), function () {
+            return Service::where('id', 15)->first();
+        });
+
 
 
         View::share([
             'Pages' => $Pages,
             'Service' => $Service,
             'Blog' => $Blog,
-
+            'Reference' => $Reference
         ]);
     }
 }

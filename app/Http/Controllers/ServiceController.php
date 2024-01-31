@@ -69,10 +69,8 @@ class ServiceController extends Controller
     public function edit($id)
     {
 
-
         $Edit = Service::findOrFail($id);
 
-        //dd($Edit->getMedia('page'));
         $Kategori = ServiceCategory::pluck('title', 'id');
         return view('backend.service.edit', compact('Edit', 'Kategori'));
     }

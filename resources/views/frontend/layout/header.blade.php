@@ -59,7 +59,7 @@
                                     <li class="has-sub">
                                         <a href="{{ route('service') }}" title="Hizmetlerimiz">Hizmetlerimiz</a>
                                         <ul>
-                                            @foreach($Service as $item)
+                                            @foreach($Service->where('category', 1) as $item)
                                                 <li>
                                                     <a href="{{ route('servicedetail', $item->slug) }}" title="{{ $item->title }}">
                                                         {{ $item->title }}

@@ -160,6 +160,8 @@
         </div>
     </div>
 
+    @include('frontend.layout.brand')
+
     <section id="blog" class="blog-area  p-relative pt-95 pb-90 fix" style="background-image:url(/frontend/img/bg/services_aliment_bg.png); background-size: contain;background-repeat: no-repeat;background-position: center center;">
         <div class="container">
             <div class="row justify-content-center">

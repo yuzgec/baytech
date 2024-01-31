@@ -110,7 +110,14 @@ class HomeController extends Controller
     }
 
     public function reference(){
-        return view('frontend.page.reference');
+
+        $Detail = Service::where('id', 15)->firstOrFail();
+
+        SEOMeta::setTitle($Detail->title. ' | Bay-Tech');
+        SEOMeta::setDescription($Detail->title. ' | Bay-Tech');
+        SEOMeta::setCanonical(url()->full());
+
+        return view('frontend.page.reference', compact('Detail'));
     }
 
     public function project(){

@@ -55,5 +55,8 @@
                 </aside>
             </div>
         </div>
+
+        @include('frontend.layout.brand')
+
     </div>
 @endsection

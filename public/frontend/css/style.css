@@ -640,7 +640,7 @@ color: #FFF;
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background: transparent linear-gradient(90deg, #000 0%, #26154D 100%) 0% 0% no-repeat padding-box;
+	background:  transparent linear-gradient(1deg, #937E69 0%, #3E2916 100%) 0% 0% no-repeat padding-box;
 	opacity: .5;
 	z-index: 1;
 }
@@ -1366,9 +1366,7 @@ border-radius: 10px;
 /* 9. brand */
 .single-brand {text-align: center;}
 .single-brand img {display: inline-block;}
-.single-brand img {
-    height: 40px;
-}
+
 /* 10. work-process */
 .wp-bg {
 	background-position: center;
@@ -1498,8 +1496,7 @@ border-radius: 10px;
     transition: .3s;
 
 }
- .team-active .slick-dots li.slick-active button {
-}
+
 .team-active .slick-dots li.slick-active button::before {
     background: url("/frontend/img/bg/active-dote.png");
     opacity: 1;
@@ -1560,7 +1557,10 @@ border-radius: 50%;
 line-height: 30px;
 }
 .team-social a:hover{
-background: transparent linear-gradient(0deg, #000 0%, #000 100%) 0% 0% no-repeat padding-box;
+	
+
+	background: transparent linear-gradient(1deg, #937E69 0%, #3E2916 100%) 0% 0% no-repeat padding-box;
+
 box-shadow: 3px 4px 15px #EB334973;
 color: #fff;
 }
@@ -1590,7 +1590,7 @@ color: #fff;
 }
 .single-team:hover .team-thumb .brd {
 
-     border: 1px solid #0002B;
+     border: 1px solid #00020B;
 }
 .single-team:hover .team-thumb .brd::before,.single-team:hover .team-thumb .brd::after{
     color: #000;
@@ -1602,7 +1602,8 @@ color: #fff;
 .single-team:hover .team-info::before{
     content: "";
     height: 20px;
-    background: transparent linear-gradient(30deg, #000 0%, #000 100%) 0% 0% no-repeat padding-box;
+	background: transparent linear-gradient(1deg, #937E69 0%, #3E2916 100%) 0% 0% no-repeat padding-box;
+
 box-shadow: 3px 4px 15px #EB334973;
     width: 100%;
     bottom: 0;
@@ -2115,8 +2116,8 @@ color: #252525;
 .single-post:hover .blog-btn{opacity: 1;}
 
 .blog-btn a {
-    background: transparent linear-gradient(1deg, #937E69 0%, #3E2916 100%) 0% 0% no-repeat padding-box;
-    box-shadow: 3px 4px 15px #0008C;
+	background: transparent linear-gradient(1deg, #937E69 0%, #3E2916 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 3px 4px 15px #937E69;
     width: 50px;
     height: 50px;
     display: inline-block;
@@ -4437,7 +4438,7 @@ text-align: center;
     width: 50px;
     display: block;
     line-height: 50px;
-    background: transparent linear-gradient(1deg, #937E69 0%, #3E2916 100%) 0% 0% no-repeat padding-box;
+	background: transparent linear-gradient(1deg, #937E69 0%, #3E2916 100%) 0% 0% no-repeat padding-box;
     box-shadow: 3px 4px 15px #000;
     border-radius: 50%;
     color: #fff;
@@ -4484,14 +4485,14 @@ text-align: center;
 }
 .single-brand {
     background: #FFFFFF 0% 0% no-repeat padding-box;
-box-shadow: 3px 4px 15px #00000026;
-border-radius: 10px;
-    padding: 40px 20px;
+	box-shadow: 1px 1px 1px #000026;
+	border-radius: 10px;
+    padding: 0px 0px;
     margin: 20px 0;
 }
 .single-brand:hover{
     background: transparent linear-gradient(1deg, #937E69 0%, #3E2916 100%) 0% 0% no-repeat padding-box;
-box-shadow:3px 4px 14px #000BF;
+box-shadow:3px 4px 14px #937E69;
 }
 
 /* Shop */

@@ -21,7 +21,14 @@
                                     </li>
                                     <li>
                                         <i class="icon dripicons-mail"></i>
-                                        <span><a href="mailto:{{ config('settings.email1') }}">{{ config('settings.email1') }}</a><br><a href="mailto:{{ config('settings.email2') }}">{{ config('settings.email2') }}</a></span>
+                                        <span>
+                                            <a href="mailto:{{ config('settings.email1') }}">
+                                                {{ config('settings.email1') }}
+                                            </a><br>
+                                            <a href="mailto:{{ config('settings.email2') }}">
+                                                {{ config('settings.email2') }}
+                                            </a>
+                                        </span>
                                     </li>
                                     <li>
                                         <i class="fal fa-map-marker-alt"></i>
