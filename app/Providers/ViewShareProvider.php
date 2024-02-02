@@ -33,8 +33,6 @@ class ViewShareProvider extends ServiceProvider
             return Service::where('id', 11)->first();
         });
 
-
-
         View::share([
             'Pages' => $Pages,
             'Service' => $Service,
