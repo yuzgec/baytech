@@ -108,7 +108,7 @@
         </div>
     </section>
 
-    <section id="project" class="project pt-95 fix" style="background-image:url(/frontend/img/bg/portfolio_bg.png); background-size: contain;background-repeat: no-repeat;">
+    <section id="project" class="project pt-95 fix" style="background-color:#191d3b">
 
         <div class="container">
             <div class="row justify-content-center">
